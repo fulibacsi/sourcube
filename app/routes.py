@@ -1,6 +1,5 @@
 from app import app
 
-
 from flask import render_template, request
 from app.model.generate import train, generate
 
@@ -12,5 +11,6 @@ def index():
 
 @app.route('/generate', methods=['POST'])
 def sourcube_me():
-    model = train(request.values.get('text', ''))
-    return generate(model)
+    text = request.values.get('text', '')
+    model, le = train(text)
+    return generate(model, le, 10)
