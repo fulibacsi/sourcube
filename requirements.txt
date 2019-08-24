@@ -1,0 +1,6 @@
+flask
+gunicorn
+numpy
+nltk
+scikit-learn
+hmmlearn
