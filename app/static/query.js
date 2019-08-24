@@ -10,7 +10,7 @@ $(document).ready(function(){
                 $('#outtext').val(response);
             },
             error: function(error) {
-                $('#outtext').val(error);
+                alert(error);
             }
         })
     })
