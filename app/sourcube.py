@@ -1,4 +1,4 @@
-from flask import Flask, request, Response
+from flask import Flask, request, Response, render_template
 
 # creating app
 app = Flask(__name__)
@@ -6,7 +6,7 @@ app = Flask(__name__)
 # regustering endpoint
 @app.route('/')
 def main():
-    return 'Welcome to SourCube!'
+    return render_template('sourcube.html')
 
 
 if __name__ == "__main__":
